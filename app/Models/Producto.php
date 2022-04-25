@@ -17,6 +17,10 @@ class Producto extends Model
         'Imagen',
         'created_at',
         'updated_at',
-        'delete_at',
+        'deleted_at',
     ];
+    public function Producto()
+    {
+        return $this->belongsTo(Producto::class);
+    }
 }
