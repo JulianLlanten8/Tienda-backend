@@ -12,7 +12,7 @@ class ProductoController extends Controller
 {
     public function index()
     {
-        $productos = Producto::paginate(15);
+        $productos = Producto::all();
         return new Productocollection($productos);
     }
     public function create(Request $request)
